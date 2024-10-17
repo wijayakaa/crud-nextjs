@@ -2,6 +2,7 @@
 
 import {saveContact} from '@/lib/actions';
 import {useFormState} from 'react-dom';
+import {SubmitButton} from '@/components/button';
 
 const CreateForm = () => {
     const [state,formActions] = useFormState(saveContact, null);
@@ -26,7 +27,7 @@ const CreateForm = () => {
                     <div id='message-error' aria-live='polite' aria-atomic='true'>
                         <p className='mt-2 text-sm text-red-500' id='name-error-message'>{state?.message}</p>
                     </div>
-                <button type='submit' className='text-white bg-blue-700 hover:bg-blue-800 font-medium rounded-sm text-sm w-full px-5 text-center'> Save</button>
+                <SubmitButton label='Save'/>
             </form>
         </div>
     )
