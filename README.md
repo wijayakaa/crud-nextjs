@@ -3,8 +3,8 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 ## Getting Started
 
 # Belajar membuat CRUD dengan next js
- Saya menggunakan tailwind dan type script dalam project ini
 
+ Saya menggunakan tailwind, prisma dan typescript di dalam project ini
 
 First, run the development server:
 
