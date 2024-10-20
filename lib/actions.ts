@@ -1,4 +1,5 @@
 "use server"
+
 import { z } from 'zod';
 import { prisma } from '@/lib/prisma';
 import { revalidatePath } from 'next/cache';
@@ -65,3 +66,17 @@ export const updateContact = async (id:string, prevSate: any, formData: FormData
     revalidatePath('/contacts');
     redirect('/contacts');
 };
+
+export const deleteContact = async (id: string) => {
+    
+    try {
+      await prisma.contact.delete({
+        where: { id },
+      });
+      
+    } catch (error) {
+      return { message: "Failed to delete contact" };
+    }
+  
+    revalidatePath("/contacts");
+  };
