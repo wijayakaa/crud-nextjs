@@ -1,7 +1,7 @@
 import { PrismaClient } from '@prisma/client';
 import { getContacts } from "@/lib/data";
 import { formatDate } from "@/lib/utils";
-import { CreateButton,EditButton, DeleteButton } from '@/components/button';
+import {EditButton, DeleteButton } from '@/components/button';
 
 
 const ContactTable = async() => {
