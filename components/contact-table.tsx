@@ -20,7 +20,7 @@ const ContactTable = async({query,currentPage}:{query : string; currentPage : nu
             </thead>
             <tbody>
                 {contacts.map((contact, index) => (
-                    <tr key={contact.id} className="bg-white border-b">q
+                    <tr key={contact.id} className="bg-white border-b">
                         <td className="py-3 px-6">{index + 1}</td>
                         <td className="py-3 px-6">{contact.name}</td>
                         <td className="py-3 px-6">{contact.phone}</td>
